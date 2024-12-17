@@ -1,0 +1,242 @@
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    .header-content h1 {
+        font-size: 3rem;
+    }
+
+    .header-content p {
+        font-size: 1.2rem;
+    }
+
+    .btn-primary {
+        padding: 12px 25px;
+    }
+
+    /* Galeria y proyectos ----------------------- */
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columnas en pantallas medianas */
+    }
+
+    .gallery-item {
+        max-width: 350px;
+    }
+
+    section.galery h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Estilos Responsive */
+@media screen and (max-width: 768px) {
+    .menu-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        padding: 0 20px;
+        z-index: 100;
+    }
+
+    /* botón de menú hamburguesa */
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+    /* Menú desplegable */
+    nav ul {
+        position: fixed;
+        top: -100000px;
+        left: 0;
+        width: 100vw;
+        /* Ajusta según el diseño deseado */
+        height: 100vh;
+        /* Altura completa de la pantalla */
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        background-color: white;
+        /* Fondo blanco */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+        transition: top 0.5s ease-in-out;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav ul.show-menu {
+        top: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    nav ul li a {
+        width: 100%;
+        color: #333;
+        font-size: 18px;
+    }
+
+    nav ul li a::after {
+        content: '';
+        display: none;
+    }
+
+    /* Botón para cerrar el menú */
+    .menu-close {
+        display: block;
+        font-size: 50px;
+        color: #333;
+        /* Color negro para el botón cuando el menú está activo */
+        cursor: pointer;
+        position: absolute;
+        /* Posiciona el botón absolutamente dentro del menú */
+        top: 20px;
+        /* Ajusta según el espaciado que desees */
+        right: 50px;
+        /* Ajusta según el espaciado que desees */
+    }
+
+    nav ul.show-menu .menu-close {
+        color: #000;
+        /* Cambia el color a negro cuando el menú está activo */
+    }
+
+    .logo {
+        width: 150px;
+        margin-left: 50px;
+    }
+
+    /*equipo de trabajo ------------------------------------- */
+
+    .mienbro {
+        flex-direction: column;
+    }
+
+    .mienbro.inverso {
+        flex-direction: column-reverse;
+    }
+
+    .mienbro .imagen img {
+        width: 150px;
+        height: 150px;
+    }
+
+    #contenedor-texto {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .footer-section.contact {
+        text-align: left;
+    }
+
+    .infomienbro {
+        text-align: left;
+        max-width: 700px;
+    }
+
+    .whatsapp_icon {
+        margin-top: -800px;
+        width: 100%;
+    }
+
+    #scrollToTopBtn {
+        bottom: 46px;
+    }
+    
+}
+
+
+@media screen and (max-width: 480px) {
+    .menu-container {
+        padding: 10px;
+    }
+
+    .header-content h1 {
+        font-size: 2rem;
+    }
+
+    .header-content p {
+        font-size: 0.9rem;
+    }
+
+    .btn-primary {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        width: 150px;
+        margin-left: 50px;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+    }
+
+    /*Sobre Nosotros*/
+
+    .sobre-nosotros {
+        max-width: 100%;
+    }
+
+    #contenedor-texto {
+        text-align: justify;
+        padding-left: 24px;
+        padding-right: 24px;
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+
+    /*equipo*/
+
+    #NuestroEquipo {
+        max-width: 100%;
+    }
+
+    .infomienbro p {
+        padding: 0px 10px;
+    }
+
+    .infomienbro h3 {
+        padding-left: 10px;
+    }
+
+    /*pie de pagina*/
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        margin: 0 auto;
+        padding: 0 20px;
+        flex-direction: column;
+    }
+
+    #Contacto {
+        background-color: #333;
+        color: #fff;
+        height: max-content;
+        max-width: 100%;
+    }
+
+    .footer-section.contact {
+        text-align: center;
+    }
+
+    .footer-container .footer-section:not(:last-child) {
+        border-right: none;
+        padding-right: 0px;
+    }
+}
